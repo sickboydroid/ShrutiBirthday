@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#060810" />
+    <title>Shruti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <canvas id="space-canvas" aria-hidden="true"></canvas>
+      <div class="sky-glow" aria-hidden="true"></div>
+
+      <section class="card-stage">
+        <article id="card" class="card loading" role="button" tabindex="0" aria-label="Birthday cards">
+          <div class="card-content" id="card-content">
+            <h1 class="card-title">Loading your surprise...</h1>
+            <p class="card-body">Preparing music, chats, and photos.</p>
+            <div class="loader-wrap">
+              <div class="loader-track">
+                <span id="loader-bar" class="loader-bar"></span>
+              </div>
+              <p class="loader-text"><span id="loader-percent">0%</span> complete</p>
+            </div>
+          </div>
+          <div class="tap-zones" aria-hidden="true">
+            <span class="zone left"></span>
+            <span class="zone right"></span>
+          </div>
+        </article>
+      </section>
+
+      <p class="tap-hint">Tap left to go back, tap right to continue</p>
+      <button id="audio-unlock" class="audio-unlock hidden" type="button">Tap to start music</button>
+      <audio id="bg-music" src="./assets/song.mp3" preload="auto"></audio>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
